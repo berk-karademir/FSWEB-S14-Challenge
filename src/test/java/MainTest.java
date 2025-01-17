@@ -21,7 +21,7 @@ public class MainTest {
     @BeforeEach
     void setUp() {
         hamburger = new Hamburger("Basic", "NORMAL", 4, "WRAP");
-        healthyBurger = new HealthyBurger("Vegan Burger", 5.67, "Sandwich");
+        healthyBurger = new HealthyBurger("Vegan Burger", 5.67, "SANDWICH");
         deluxeBurger = new DeluxeBurger();
     }
 
@@ -108,10 +108,10 @@ public class MainTest {
     @DisplayName("Healthy Burger sınıfı addAddition methodları doğru çalışıyor mu?")
     @Test
     public void testHealthyBurgerAddAdditionMethods() throws NoSuchFieldException {
-        healthyBurger.addHealthyAddition1("test", 2);
-        healthyBurger.addHealthyAddition2("test", 2);
+        healthyBurger.addHealthyAddition1("test", 1);
+        healthyBurger.addHealthyAddition2("test2", 2);
         healthyBurger.itemizeHamburger();
-        assertEquals(healthyBurger.getPrice(), 9.67);
+        assertEquals(healthyBurger.getPrice(), 8.67);
     }
 
 }
